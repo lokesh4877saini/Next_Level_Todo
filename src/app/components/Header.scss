@@ -1,0 +1,55 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  // background-color: #f0f0f0; /* Example background color */
+
+  & > div {
+    flex: 1;
+  }
+
+  section {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      color: #333; /* Link color */
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ddd; /* Hover background color */
+      }
+    }
+  }
+  .button {
+    padding: 0.6rem 1.2rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    > a {
+      color: white;
+      &:hover {
+        background-color: #0059c1;
+      }
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #555;
+  }
+}
