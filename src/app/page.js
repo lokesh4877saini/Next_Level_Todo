@@ -3,7 +3,7 @@ import { TodoItem } from './components/Servers';
 import { cookies } from 'next/headers'
 import './TodoPage.scss';
 const fetchTodo = async () => {
-  const cookieStore = await cookies(); // gets server-side cookies
+  const cookieStore = cookies(); // gets server-side cookies
   const token = cookieStore.get("token")?.value;
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/mytask`, {
     headers: {
